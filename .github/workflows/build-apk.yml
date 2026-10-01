@@ -19,20 +19,17 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5  # Обновлено до v5 для поддержки Node.js 24
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      # Этот экшен автоматически установит нужные платформы, считывая ваш build.gradle
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4  # Обновлено до v4 (исправлена проблема с пакетом 'tools')
 
-      # Этот экшен автоматически кэширует зависимости и настраивает Gradle wrapper
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      # Сборка приложения с использованием Gradle Wrapper (рекомендуемый способ)
       - name: Build APK
         run: ./gradlew :app:assembleDebug --no-daemon
 
