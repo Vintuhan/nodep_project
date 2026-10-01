@@ -1,0 +1,3 @@
+nodep project Android port 0.3.1
+Build type: debug/release via Android Studio
+Source base: nodep-project-v0.3.1

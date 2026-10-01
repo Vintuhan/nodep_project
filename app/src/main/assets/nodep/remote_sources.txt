@@ -1,0 +1,2 @@
+# Add your own trusted blocklist source URLs here, one URL per line.
+# The Android build intentionally ships with no external gambling-list URL.
