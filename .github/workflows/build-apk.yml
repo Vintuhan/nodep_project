@@ -18,12 +18,12 @@ jobs:
 
       - name: Create Gradle Wrapper
         run: |
-          gradle wrapper --gradle-version 8.9 || true
+          gradle wrapper --gradle-version 9.5 || true
           if [ ! -f gradlew ]; then
             # bootstrap wrapper without local gradle
-            curl -sL https://raw.githubusercontent.com/gradle/gradle/v8.9.0/gradlew -o gradlew
+            curl -sL https://raw.githubusercontent.com/gradle/gradle/v9.5.0/gradlew -o gradlew
             mkdir -p gradle/wrapper
-            curl -sL https://github.com/gradle/gradle/raw/v8.9.0/gradle/wrapper/gradle-wrapper.jar -o gradle/wrapper/gradle-wrapper.jar
+            curl -sL https://github.com/gradle/gradle/raw/v9.5.0/gradle/wrapper/gradle-wrapper.jar -o gradle/wrapper/gradle-wrapper.jar
             chmod +x gradlew
           fi
 
